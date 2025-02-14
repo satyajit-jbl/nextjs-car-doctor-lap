@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-// import { signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-// import toast from "react-hot-toast";
+import toast from "react-hot-toast";
 // import SocialLogin from "./SocialLogin";
 
 export default function LoginForm() {
@@ -15,15 +15,17 @@ export default function LoginForm() {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
+    // await signIn("credentials", {email, password});
+    // console.log({email, password});
     toast("Submitting ....");
     try {
-    //   const response = await signIn("credentials", {
-    //     email,
-    //     password,
-    //     callbackUrl: "/",
-    //     redirect: false,
-    //   }
-    // );
+      const response = await signIn("credentials", {
+        email,
+        password,
+        callbackUrl: "/",
+        redirect: false,
+      }
+    );
       if (response.ok) {
         toast.success("Logged In successfully");
         router.push("/");

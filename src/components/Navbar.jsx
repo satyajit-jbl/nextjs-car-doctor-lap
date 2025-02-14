@@ -71,7 +71,7 @@ export default function NavBar() {
         </div>
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">
-            {status == "authenticated" ? (
+            {/* {status == "authenticated" ? (
               <>
                 <li>
                   <Image
@@ -92,7 +92,7 @@ export default function NavBar() {
                   <Link href={"/login"}>Login</Link>
                 </li>
               </>
-            )}
+            )} */}
           </ul>
           <a className="btn btn-outline">Appointment</a>
         </div>
