@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn, FaGoogle } from "react-icons/fa";
 import { registerUser } from "@/app/actions/auth/registerUser";
 // import { registerUser } from "@/app/actions/auth/registerUser";
-// import SocialLogin from "@/app/login/components/SocialLogin";
+import SocialLogin from "@/app/login/components/SocialLogin";
 export default function RegisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,7 +54,7 @@ export default function RegisterForm() {
         Sign Up
       </button>
       <p className="text-center">Or Sign In with</p>
-      {/* <SocialLogin /> */}
+      <SocialLogin />
       <p className="text-center">
         Don't Have an account?{" "}
         <Link href="/login" className="text-orange-500 font-bold">

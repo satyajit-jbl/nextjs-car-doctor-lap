@@ -6,7 +6,7 @@ import { FaGoogle } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-// import SocialLogin from "./SocialLogin";
+import SocialLogin from "./SocialLogin";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -18,6 +18,7 @@ export default function LoginForm() {
     // await signIn("credentials", {email, password});
     // console.log({email, password});
     toast("Submitting ....");
+    // alert("Submitting ....");
     try {
       const response = await signIn("credentials", {
         email,
@@ -31,6 +32,7 @@ export default function LoginForm() {
         router.push("/");
         form.reset();
       } else {
+        // alert("FAILED to Log In");
         toast.error("FAILED to Log In");
       }
       //console.log({ email, password });
@@ -67,7 +69,7 @@ export default function LoginForm() {
         Sign In
       </button>
       <p className="text-center">Or Sign In with</p>
-      {/* <SocialLogin /> */}
+      <SocialLogin />
       <p className="text-center">
         Already have an account?{" "}
         <Link href="/register" className="text-orange-500 font-bold">
