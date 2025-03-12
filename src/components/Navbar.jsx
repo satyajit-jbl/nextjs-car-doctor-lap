@@ -98,7 +98,7 @@ export default function NavBar() {
             )} */}
             {status == "authenticated" ? 
             (<>
-            <li><Image src={session?.user?.image} width={50} height={50} alt="user-image"/></li>
+            <li><Image src={session?.user?.image} width={50} height={50} alt="user-logo"/></li>
             <li onClick={()=>signOut()}>Log out</li>
             </>) : 
             

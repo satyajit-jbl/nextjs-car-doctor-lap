@@ -12,6 +12,7 @@ export default function SocialLogin() {
   const handleSocialLogin = (providerName) => {
     // console.log(providerName);
     // const result = await signIn(providerName, {redirect: false});
+    // console.log(result);
     // if(result.ok){
     //   router.push('/');
     //   toast.success(`Lodded in Suuccessgully using ${providerName}`)
